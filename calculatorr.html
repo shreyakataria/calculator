@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      margin: 0 auto;
+    }
+
+    .calculator input[type="text"],
+    .calculator input[type="submit"] {
+      margin: 5px 0;
+      padding: 5px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <input type="text" id="num2" placeholder="Enter number 2" />
+    <input type="submit" value="Add" onclick="addNumbers()" />
+    <input type="submit" value="Subtract" onclick="subtractNumbers()" />
+    <input type="submit" value="Multiply" onclick="multiplyNumbers()" />
+    <input type="submit" value="Divide" onclick="divideNumbers()" />
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function addNumbers() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 + num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+
+    function subtractNumbers() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 - num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+
+    function multiplyNumbers() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 * num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+
+    function divideNumbers() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 / num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+  </script>
+</body>
+</html>
